@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "jamfile",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.jamfile",
+					"match": "\\b(if|while|for|return|import|rule|check-env)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.jamfile",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.jamfile",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.jamfile",
+					"begin": "#",
+					"end": "\\n"
+				}
+			]
+		}
+	},
+	"scopeName": "source.jamfile"
+}

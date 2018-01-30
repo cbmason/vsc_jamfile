@@ -1,0 +1,26 @@
+{
+    "name": "jam",
+    "displayName": "jamfile",
+    "description": "Boost.build jamfile",
+    "version": "0.0.1",
+    "publisher": "chrismason285",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "jamfile",
+            "aliases": ["jamfile", "jamfile"],
+            "extensions": [".jam"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "jamfile",
+            "scopeName": "source.jamfile",
+            "path": "./syntaxes/jamfile.tmLanguage.json"
+        }]
+    }
+}
